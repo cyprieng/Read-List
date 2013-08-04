@@ -1,0 +1,76 @@
+/* --------------
+ * GLOBAL
+ * -------------*/
+body{
+	padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+	margin-bottom: 60px;
+}
+
+.center{
+	text-align: center;
+}
+
+/* --------------
+ * SIGN IN
+ * -------------*/
+.form-signin{
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+/* --------------
+ * ADD
+ * -------------*/
+#addForm input[type="text"]{
+	width: 300px;
+}
+
+#addForm textarea{
+	height: 300px;
+	width: 500px;
+}
+
+/* --------------
+ * LIST
+ * -------------*/
+td.desc{
+	text-align: justify;
+	white-space : normal;
+}
+td a{color: #000;}
+td a:hover{text-decoration: none;color: #000;}
+table img{
+	width: 96px;
+	height: 150px;
+}
+table tr{
+	cursor: pointer;
+}
+.minimize{}
+.maximize{
+	height: 20px;
+	overflow: hidden;
+}
+.title{
+	min-width: 300px;
+}
+.no-wrap{
+	white-space: nowrap;
+}
+
+/* --------------
+ * DETAIL
+ * -------------*/
+.detail img{
+	margin-right: 10px;
+	width: 128px;
+	height: 199px;
+}
+
+/* --------------
+ * STATS
+ * -------------*/
+#overview{
+	font-size: 20px;
+}
