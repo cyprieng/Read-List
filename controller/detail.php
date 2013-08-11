@@ -40,6 +40,16 @@
 	if(isset($_GET["id"]) && !is_nan($_GET["id"])){ //Get book details
 		$book = getBooks($_GET["id"]);
 		$book["date"] = date("d-m-Y", strtotime($book["date"]));
+
+		//Google book API request
+		$req = "https://www.googleapis.com/books/v1/volumes?q=inauthor:".urlencode($book["author"])."+intitle:".urlencode($book["title"]);
+		$response = file_get_contents($req);  
+		$results = json_decode($response);
+
+		if($results->totalItems > 0){
+			$bookData = $results->items[0];
+			$book["google"] = $bookData->volumeInfo->infoLink;
+		}
 	}
 
 	require_once(ROOT_PATH.VIEW_PATH.'detail.php');

@@ -13,6 +13,8 @@
 
 		<div class="clearfix">
 			<?php echo $book["desc"]; ?>
+			<br/><br/>
+			<a href="<?php echo $book["google"]; ?>">More info on Google →</a>
 		</div>
 	</div>
 </div>
