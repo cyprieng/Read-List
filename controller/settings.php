@@ -34,12 +34,13 @@
 
 					$book["title"] = $bookData->volumeInfo->title;
 					$book["author"] = $bookData->volumeInfo->authors[0];
-					$book["desc"] = (empty($book["desc"])) ? $bookData->volumeInfo->description:$book["desc"];
+					$book["desc"] = (empty($book["desc"]) && isset($bookData->volumeInfo->description)) ? $bookData->volumeInfo->description:$book["desc"];
 					$book["pages"] = (isset($bookData->volumeInfo->pageCount)) ? $bookData->volumeInfo->pageCount:"300";
 
 					if(isset($bookData->volumeInfo->imageLinks)){
 						$book["img"] = str_replace('&edge=curl', '', $bookData->volumeInfo->imageLinks->thumbnail);
 					}
+					else $book["img"] = "http://books.google.fr/googlebooks/images/no_cover_thumb.gif";
 
 					updateBook(getUserDBId($IDs[0]), $book["id"], htmlspecialchars($book["title"]), htmlspecialchars($book["author"]), nl2br(htmlspecialchars($book["desc"])), $book["pages"], $book["img"], $book["date"], $book["mark"]);
 				}

@@ -9,7 +9,7 @@
 			Pages: <?php echo $book["pages"]; ?><br/><br/>
 			Reading date: <?php echo $book["date"]; ?><br/>
 		</p>
-		<a href="index.php?p=detail&id=<?php echo $book["id"]; ?>&del=<?php echo $book["id"]; ?>"><button type="button" class="btn btn-danger">Delete</button></a> <a href="index.php?p=add&id=<?php echo $book["id"]; ?>"><button type="button" class="btn btn-info">Modify</button></a><br/><br/><br/>
+		<a href="index.php?p=detail&id=<?php echo $book["id"]; ?>&del=<?php echo $book["id"]; ?>"><button type="button" class="btn btn-danger">Delete</button></a> <a href="index.php?p=add&id=<?php echo $book["id"]; ?>"><button type="button" class="btn btn-info">Modify</button></a> <a href="index.php?p=detail&id=<?php echo $book["id"]; ?>&update=1"><button type="button" class="btn btn-info">Update data</button></a><br/><br/><br/>
 
 		<div class="clearfix">
 			<?php echo $book["desc"]; ?>
