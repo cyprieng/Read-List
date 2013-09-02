@@ -16,6 +16,7 @@
 	foreach($books as $book){
 		$pagesNumber += $book["pages"]; //Number of pages
 
+		date_default_timezone_set('UTC');
 		if(strtotime($book["date"]) != 0){ //If date is not default value
 			$count[date("m", strtotime($book["date"])) -1]++; //Increase month books number
 
